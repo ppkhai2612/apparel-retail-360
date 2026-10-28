@@ -19,10 +19,10 @@ dp.create_auto_cdc_flow(
 
 
 # Create the `silver.silver_products` table
-dp.create_streaming_table(SILVER_PRDUCTS)
+dp.create_streaming_table(SILVER_PRODUCTS)
 dp.create_auto_cdc_flow(
-    target=SILVER_PRDUCTS,
-    source=PRDUCTS_CLEANED_STREAM,
+    target=SILVER_PRODUCTS,
+    source=PRODUCTS_CLEANED_STREAM,
     keys=["product_id"],
     sequence_by=F.col("last_update_time"),
     ignore_null_updates=True,
