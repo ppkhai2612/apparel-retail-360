@@ -2,11 +2,15 @@
 
 ## Context and Goal
 
-Welcome to the Apparel Retail 360 project! You are the data engineer at LoomLane Outfitters, a fictional 5-store apparel chain that runs its tills, loyalty program, product catalog and store records on separate systems. Store managers get yesterday's sales by email at noon, merchandising cannot see which items sell, and marketing ranks customers from a spreadsheet. Your job: one pipeline that turns the four raw feeds into three tables they can use on Monday morning: daily sales per store, product performance, and customer spend.
+**Context**: LoomLane Outfitters, a fictional 5-store apparel chain that runs its tills, loyalty program, product catalog and store records on separate systems. Store managers get yesterday's sales by email at noon, merchandising cannot see which items sell, and marketing ranks customers from a spreadsheet.
 
-Using Lakeflow Spark Declarative Pipelines (formerly Delta Live Tables / DLT), you will ingest raw data, progressively clean and transform it through a medallion architecture (Bronze, Silver, and Gold layers), and ultimately produce curated datasets ready for business intelligence and reporting.
+**Job**: one pipeline that turns the four raw feeds into three tables they can use on Monday morning: daily sales per store, product performance, and customer spend.
+
+Using Lakeflow Spark Declarative Pipelines (formerly Delta Live Tables / DLT) to ingest raw data, progressively clean and transform it through a medallion architecture (Bronze, Silver, and Gold layers), and ultimately produce curated datasets ready for business intelligence and reporting.
 
 ## Architecture
+
+![](images/architecture.png)
 
 ## How to start
 
@@ -26,7 +30,9 @@ Using Lakeflow Spark Declarative Pipelines (formerly Delta Live Tables / DLT), y
 
 ## Project Structure
 
-## Documentation
+```
+
+```
 
 ## Learning Objectives
 
