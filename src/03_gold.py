@@ -17,9 +17,9 @@ def denormalized_sales_facts():
 
     df = (
         sales
-        .join(stores, "store_id", left)
-        .join(stores, "store_id", left)
-        .join(stores, "store_id", left)
+        .join(stores, "store_id", "left")
+        .join(customers, "customer_id", "left")
+        .join(products, "product_id", "left")
         .select(
             sales.transaction_id,
             sales.event_time,
