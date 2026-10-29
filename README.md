@@ -31,7 +31,24 @@ Using Lakeflow Spark Declarative Pipelines (formerly Delta Live Tables / DLT) to
 ## Project Structure
 
 ```
-
+.
+├── .gitignore
+├── README.md                          # Project overview
+├── docs/
+│   ├── DataContract.md                # Every table pipeline must produce, with its columns, types and keys
+│   ├── ProjectPlan.md                 # Step-by-step implementation
+│   ├── SyntheticDataGenerator.md      # Details about the data generator and schemas
+├── src/
+│   ├── 01_bronze.py                   # Bronze layer: Raw data ingestion from the landing folders
+│   ├── 02A_silver.py                  # Silver layer: cleaned views with data quality expectations for all four streams
+│   ├── 02B_silver.py                  # Silver layer: SCD Type 2 dimensions for customers, products and stores
+│   ├── 02C_silver.py                  # Silver layer: sales and returns fact tables
+│   ├── 02D_silver.py                  # Silver layer: current-version views of the three dimensions
+│   ├── 03_gold.py                     # Gold layer: Business-ready aggregations and analytics
+│   ├── data_generator.py              # Synthetic data generator that creates realistic streaming data
+│   ├── environment_maintenance.ipynb  # Notebook provides maintenance utilities for the environment
+│   ├── environment_setup.ipynb        # Notebook to set up Unity Catalog (catalogs, schemas, volumes)
+│   ├── variables.py                   # Configuration file for catalog names, paths, and other settings
 ```
 
 ## Learning Objectives
